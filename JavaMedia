@@ -1,0 +1,91 @@
+    nome = JOptionPane.showInputDialog("Digite o nome do aluno");   
+
+    //Recebe a string nota   
+    //1 Bimestre   
+    n10 = JOptionPane.showInputDialog("Digite nota da Prova do 1 Bimestre");   
+    //converte a String em double   
+    nota10 = Double.parseDouble(n1);   
+       
+    n12 = JOptionPane.showInputDialog("Digite nota do Projeto do 1 Bimestre");   
+    nota12 = Double.parseDouble(n2);
+    
+    n13 = JOptionPane.showInputDialog("Digite nota da Lista de Exercicios do 1 Bimestre");   
+    nota13 = Double.parseDouble(n3);
+    
+    n14 = JOptionPane.showInputDialog("Digite nota Contribuição em Projetos de Software Livre do 1 Bimestre");   
+    nota14 = Double.parseDouble(n4);
+       
+    media1 = ((nota10*0.30)+(nota12*0.30)+(nota13*0.20)+(nota14*0.30))/4;  
+	
+	//2 Bimestre
+    n20 = JOptionPane.showInputDialog("Digite nota da Prova do 2 Bimestre");   
+    //converte a String em double   
+    nota20 = Double.parseDouble(n1);   
+       
+    n22 = JOptionPane.showInputDialog("Digite nota do Projeto do 2 Bimestre");   
+    nota22 = Double.parseDouble(n2);
+    
+    n233 = JOptionPane.showInputDialog("Digite nota da Lista de Exercicios do 2 Bimestre");   
+    nota23 = Double.parseDouble(n3);
+    
+    n24 = JOptionPane.showInputDialog("Digite nota Contribuição em Projetos de Software Livre do 2 Bimestre");   
+    nota24 = Double.parseDouble(n4);
+       
+    media2 = ((nota20*0.30)+(nota22*0.30)+(nota23*0.20)+(nota24*0.30))/4; 	
+	
+	//3 Bimestre
+    n30 = JOptionPane.showInputDialog("Digite nota da Prova do 3 Bimestre");   
+    //converte a String em double   
+    nota1 = Double.parseDouble(n1);   
+       
+    n32 = JOptionPane.showInputDialog("Digite nota do Projeto do 3 Bimestre");   
+    nota32 = Double.parseDouble(n2);
+    
+    n33 = JOptionPane.showInputDialog("Digite nota da Lista de Exercicios do 3 Bimestre");   
+    nota33 = Double.parseDouble(n3);
+    
+    n34 = JOptionPane.showInputDialog("Digite nota Contribuição em Projetos de Software Livre do 3 Bimestre");   
+    nota34 = Double.parseDouble(n4);
+       
+    media3 = ((nota30*0.30)+(nota32*0.30)+(nota33*0.20)+(nota34*0.30))/4; 
+       
+    if ((media1+media2+media3)/3 >=8)   
+    {   
+        JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A média do aluno é "+media,"Aluno Aprovado",JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0); 
+    }
+    else   
+    {   
+    JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A media do aluno é "+media, "Deverá fazer Prova Substituta", JOptionPane.WARNING_MESSAGE);   
+    }   
+       
+    nsub = JOptionPane.showInputDialog("Digite a nota da Sub");   
+    //converte a String em double   
+    sub = Double.parseDouble(nsub);   
+       
+    /*if (sub<=6)   
+    {   
+        System.out.println(n1);   
+       
+        nsub = n1;   
+        n1 = nsub;   
+    }   
+    else   
+    {   
+        System.out.println(n2);   
+    }*/   
+       
+               
+    media = (sub + media)/2;   
+       
+    if (media>=8)   
+    {   
+        JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A média do aluno é "+media,"Aluno Aprovado",JOptionPane.INFORMATION_MESSAGE);   
+    }   
+    else  	   
+    {   
+    JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A media do aluno é "+media, "Reprovado", JOptionPane.WARNING_MESSAGE);   
+    }   
+   
+    System.exit(0);   
+}  
